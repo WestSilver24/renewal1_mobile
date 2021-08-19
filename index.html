@@ -213,7 +213,7 @@
                         <p class="call">1644-0808</p><!--.call-->
                         <p class="ct">
                             <strong>평일 07:00~17:00<br>토요일 07:00~12:00</strong>
-	                        <span>일요일 및 공휴일 휴무<br>(점심시간 12:00 ~13:00)</span>
+	                        <span>일요일 및 공휴일 휴무<br>(점심시간 12:00~13:00)</span>
 	                    </p><!--.calltime-->
                     </a></div><!--.cs-->
                     <div class="survey"><a href="#">
@@ -313,61 +313,51 @@
     <ul class="gnb">
         <li class="d1">
             <a href="#" class="m">아이메드 소개</a>
-            <div class="sub">
-                <ul>
-                    <li><a href="#">아이메드의 특별함</a></li>
-                    <li><a href="#">연혁</a></li>
-                    <li><a href="#">가족사 소개</a></li>
-                    <li><a href="#">의료진 소개</a></li>
-                    <li><a href="#">사회 공헌</a></li>
-                    <li><a href="#">의학컬럼</a></li>
-                </ul>
-            </div><!--sub-->
-        </li>
+            <ul class="sub">
+                <li><a href="#">아이메드의 특별함</a></li>
+                <li><a href="#">연혁</a></li>
+                <li><a href="#">가족사 소개</a></li>
+                <li><a href="#">의료진 소개</a></li>
+                <li><a href="#">사회 공헌</a></li>
+                <li><a href="#">의학컬럼</a></li>
+            </ul><!--.sub-->
+        </li><!--.d1-->
         <li class="d1">
             <a href="#" class="m">센터소개</a>
-            <div class="sub">
-                <ul>
-                    <li><a href="#">강남센터</a></li>
-                    <li><a href="#">강북센터</a></li>
-                </ul>
-            </div><!--sub-->
-        </li>
+            <ul class="sub">
+                <li><a href="#">강남센터</a></li>
+                <li><a href="#">강북센터</a></li>
+            </ul><!--.sub-->
+        </li><!--.d1-->
         <li class="d1">
             <a href="#" class="m">검진/진료소개</a>
-            <div class="sub">
-                <ul>
-                    <li><a href="#">건강검진 소개</a></li>
-                    <li><a href="#">클리닉 소개</a></li>
-                    <li><a href="#">예방접종 소개</a></li>
-                    <li><a href="#">검진 전 주의사항</a></li>
-                </ul>
-            </div><!--sub-->
-        </li>
+            <ul class="sub">
+                <li><a href="#">건강검진 소개</a></li>
+                <li><a href="#">클리닉 소개</a></li>
+                <li><a href="#">예방접종 소개</a></li>
+                <li><a href="#">검진 전 주의사항</a></li>
+            </ul><!--.sub-->
+        </li><!--.d1-->
         <li class="d1">
             <a href="#" class="m">예약/결과조회</a>
-            <div class="sub">
-                <ul>
-                    <li><a href="#">예약안내</a></li>
-                    <li><a href="#">검진예약</a></li>
-                    <li><a href="#">예약확인</a></li>
-                    <li><a href="#">결과조회</a></li>
-                    <li><a href="#">문진작성</a></li>
-                </ul>
-            </div><!--sub-->
-        </li>
+            <ul class="sub">
+                <li><a href="#">예약안내</a></li>
+                <li><a href="#">검진예약</a></li>
+                <li><a href="#">예약확인</a></li>
+                <li><a href="#">결과조회</a></li>
+                <li><a href="#">문진작성</a></li>
+            </ul><!--.sub-->
+        </li><!--.d1-->
         <li class="d1">
             <a href="#" class="m">고객센터</a>
-            <div class="sub">
-                <ul>
-                    <li><a href="#">공지사항</a></li>
-                    <li><a href="#">자주하는 질문</a></li>
-                    <li><a href="#">1:1문의</a></li>
-                    <li><a href="#">고객 만족도조사</a></li>
-                    <li><a href="#">증명서 발급안내</a></li>
-                </ul>
-            </div><!--sub-->
-        </li>
+            <ul class="sub">
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">자주하는 질문</a></li>
+                <li><a href="#">1:1문의</a></li>
+                <li><a href="#">고객 만족도조사</a></li>
+                <li><a href="#">증명서 발급안내</a></li>
+            </ul><!--.sub-->
+        </li><!--.d1-->
     </ul><!--.gnb-->
     <div class="sFamily">
         <select id="sFamily" name="sFamily">
@@ -423,6 +413,25 @@
         right:-190
     },300);
     });
+
+    $(".gnb li .m").click(function(){
+    var tg=$(this).siblings(".sub");
+    var dis=tg.css("display");
+    
+    if(dis=="block"){
+        $(this).removeClass("on");
+        tg.slideUp(300);
+    };
+        
+    if(dis=="none"){
+        $(".gnb li .m").removeClass("on");
+        $(this).addClass("on");
+        $(".gnb li .sub").slideUp(300);
+        tg.slideDown(300);
+    };
+    return false;
+    });
+
     
     $("#mainSlider .simg").bxSlider({
         auto: true,

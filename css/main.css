@@ -81,12 +81,12 @@
 .serviceMn{width:100%; height:auto; background:#fff; box-sizing:border-box;
               border:1px solid #ebebeb; border-radius:20px; padding:35px 25px;}
 .serviceMn div h3{float:left; font-size:21px; font-weight:700;
-                       line-height:21px; margin-right:18px;}
-.serviceMn div .menu{float:left; width:188px; background:#f5f5f5; margin-top:-4.5px;
+                       line-height:21px; margin-right:45px;}
+.serviceMn div .menu{float:left; width:148px; background:#f5f5f5; margin-top:-4.5px;
                             border:1px solid #ebebeb; border-radius:15px; margin-bottom:25px;}
-.serviceMn div .menu li{float:left; width:94px; height:30px; font-size:16px; text-align: center;
+.serviceMn div .menu li{float:left; width:74px; height:30px; font-size:16px; text-align: center;
                               border:1px solid rgba(0,0,0,0); border-radius:15px; box-sizing: border-box;}
-.serviceMn div .menu li a{display: block; padding:6px 0;}
+.serviceMn div .menu li a{display: block; padding:5px 0;}
 .serviceMn div .menu .on{background:#91d400; border:1px solid #91d400;}
 .serviceMn div .menu .on a{color:#fff; font-weight:700;}
 .serviceMn .pannel{}
@@ -105,7 +105,7 @@
 
 /*고객센터 영역*/
 .csCenter{width:100%; height:auto; box-sizing:border-box; padding:40px 15px;}
-.csCenter .inner{height:421px; border:1px solid #ebebeb; box-sizing:border-box; 
+.csCenter .inner{height:auto; border:1px solid #ebebeb; box-sizing:border-box; 
                     border-radius:20px; padding:35px 25px;
                     background:#fff url(../img/cs_box.png) no-repeat right 0; overflow:hidden;}
 
@@ -113,23 +113,23 @@
 .box:nth-child(2){margin-top:50px;}
 .box h3{font-size:21px; font-weight:700; margin-bottom:25px;}
 
-.box .cs{float:left; width:50%; height:140px;  box-sizing:border-box;}
+.box .cs{float:left; width:60%; height:140px;  box-sizing:border-box;}
 .box .cs a{display:block; background:#f5f5f5; border-radius:10px;
              padding:19px 15px; margin-right:16px; box-sizing:border-box;}
 .box .cs .call{font-size:18px; font-weight:800; margin-left:-3px; margin-bottom:5px;}
 .box .cs .ct strong{display:block; font-size:14px; margin-bottom:10px;}
 .box .cs .ct span{font-size:13px; line-height:16px; color:#666;}
 
-.box .survey{float:left; width:50%; height:140px; position:relative;}
+.box .survey{float:left; width:40%; height:140px; position:relative;}
 .box .survey a{display: block; background:#f5f5f5; border-radius:10px;
                   padding:19px 15px; box-sizing:border-box;}
 .box .survey strong{display:block; font-size:16px; padding-bottom:87px;}
-.box .survey img{position:absolute; top:50px; right:15px;}
+.box .survey img{position:absolute; top:60px; right:15px;}
 
 .box .certificate{}
 .box .certificate a{display: block; width:auto; height:70px;}
-.box .certificate img{display: block; float:left;}
-.box .certificate span{display: block; float:left; margin:21px 0 0 20px;}
+.box .certificate img{display: block; float:left; margin-right:20px;}
+.box .certificate span{display: block; float:left; margin:21px 0 0;}
 
 /*푸터영역*/
 #footer{width:100%; height:242px; text-align:center; background:#001f33;}
@@ -173,12 +173,12 @@
 .copy{font-size:13px; color:#555;}
 
 /*검정 투명 배경*/
-.blackBg{position:fixed; top:0; left:0;
+.blackBg{position:fixed; top:0; left:0; z-index:300;
             width:100%; height:100%; background:#000;
             opacity:0.5; display: none;}
 
 /*모바일 사이드 메뉴*/
-.sideMn{position:fixed; right:-190px; top:0; z-index:4;
+.sideMn{position:fixed; right:-190px; top:0; z-index:600;
            background:#fff; width:190px; height:100%;}
 .sideMn h2{display:none;}
 
@@ -194,31 +194,24 @@
 .sideMn .gnb{padding:53px 0 0;}
 
 .sideMn .gnb .d1{position:relative; border-bottom:1px solid #ddd;}
-.sideMn .gnb .d1 .m{display:block; font-size:15px; font-weight:500;
-                           padding:15px 10px; position:relative;}
-.sideMn .gnb .d1:hover .m{font-weight:800; color:#66bd2b;}
-
-/*화살표*/
-.sideMn .gnb .d1 .m::after{content:""; display: block; 
-                                 width:7px; height:7px; 
-                                 border-left:1px solid #333;
-                                 border-bottom:1px solid #333;
-                                 transform:rotate(-45deg);
-                                 position:absolute; top:18px; right:15px;
-                                 transition: all 0.5s;}
-/*마우스 하버시 화살표 오른쪽 회전*/
-.sideMn .gnb .d1:hover .m::after{top:22px; border-color:#66bd2b; transform:rotate(-225deg);}
+.sideMn .gnb .d1 .m{display:block; padding:15px 10px; font-size:15px; font-weight:500;}
+.sideMn .gnb .d1 .m.on{font-weight:800; color:#66bd2b;}
+.sideMn .gnb .d1 .m::after{display: block; content:"";
+                                  width:7px; height:7px; 
+                                  border-left:1px solid #333;
+                                  border-bottom:1px solid #333;
+                                  transform:rotate(-45deg);
+                                  position:absolute; top:18px; right:15px;
+                                  transition: all 0.5s;}
+.sideMn .gnb .d1 .m.on::after{top:22px; border-color:#66bd2b; transform:rotate(135deg);}
 
 /*서브메뉴*/
-.sideMn .gnb .d1 .sub{display:none;}
-.sideMn .gnb .d1:hover .sub{display:block;}
+.sideMn .gnb .d1 .sub{display:none; padding:10px 15px; 
+                            border-top:2px solid #66bd2b; background:#f5f5f5;}
 
-.sideMn .gnb .d1 .sub ul{padding:10px 15px; border-top:2px solid #66bd2b; background:#f5f5f5;}
-.sideMn .gnb .d1 .sub ul li{height:33px;}
-.sideMn .gnb .d1 .sub ul li a{display: block; padding:5px 0; color:#333; font-size:14px;}
-.sideMn .gnb .d1 .sub ul li:hover a{font-weight:700;}
-
-.sideMn .gnb li a{display:block; padding:12px 0;}
+.sideMn .gnb .d1 .sub li{height:33px;}
+.sideMn .gnb .d1 .sub li a{display: block; padding:5px 0; color:#333; font-size:14px;}
+.sideMn .gnb .d1 .sub li:hover a{font-weight:700;}
 
 /*사이드메뉴 푸터*/
 .sFamily{margin:20px 10px 30px;}
