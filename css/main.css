@@ -80,10 +80,10 @@
 /*서비스 탭메뉴*/
 .serviceMn{width:100%; background:#fff; box-sizing:border-box;
               border:1px solid #ebebeb; border-radius:20px; padding:35px 25px;}
-.serviceMn div h3{float:left; font-size:21px; font-weight:700; margin-bottom:4.5px;
-                       line-height:21px; margin-right:20px;}
-.serviceMn div .menu{float:left; width:148px; background:#f5f5f5; margin-top:-4.5px;
-                            border:1px solid #ebebeb; border-radius:15px; margin-bottom:25px;}
+.serviceMn div h3{float:left; font-size:21px; font-weight:700; line-height:21px;
+                       margin-bottom:25px; margin-right:20px;}
+.serviceMn div .menu{float:left; width:148px; background:#f5f5f5; border:1px solid #ebebeb;
+                             border-radius:15px; margin-top:-4.5px; margin-bottom:25px;}
 .serviceMn div .menu li{float:left; width:74px; height:30px; font-size:16px; text-align: center;
                               border:1px solid rgba(0,0,0,0); border-radius:15px; box-sizing: border-box;}
 .serviceMn div .menu li a{display: block; padding:5px 0;}
